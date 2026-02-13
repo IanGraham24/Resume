@@ -11,7 +11,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+  background: #fff;
   color: #000;
   line-height: 1.6;
 }
@@ -71,6 +71,7 @@ figure {
 figure img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 footer {
@@ -81,9 +82,8 @@ footer {
 @media (min-width: 900px) {
   body {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: 1rem;
   }
 
   header {
@@ -92,11 +92,15 @@ footer {
   }
 
   main {
-    width: 900px;
+    width: auto;
+    flex: 1;
+    min-height: 100vh;
   }
 
   footer {
+    flex-basis: 100%;
     width: 100%;
   }
 }
+
 
